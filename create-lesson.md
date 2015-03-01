@@ -79,7 +79,7 @@ Create and test your exercise inside Hexlet Vagrant VM in `/vagrant/exercises/MY
 
 #### README.md
 
-Description of the task. This text (markdown) will be shown to the user when they start the exercise.
+README.md file contains description of the task written in markdown syntax. This text will be shown to a user when s/he starts the exercise.
 
 #### Dockerfile
 
