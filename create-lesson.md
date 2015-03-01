@@ -144,7 +144,7 @@ At this point you will be redirected to "My exercises" page and you will see you
 
 When it's done, you'll see the status changed to "built":
 
-![](https://hexlet.uservoice.com/assets/76400881/Screen%20Shot%202015-01-12%20at%2018.21.42.png)
+![Build screen](assets/lesson-build-screen.png)
 
 At this point you can add this exercise to any lesson you've created or will create.
 
