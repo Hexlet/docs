@@ -1,22 +1,20 @@
 # How to create lesson and exercise
 
-## Overview
+## Create a lesson
 
-Creating a lesson is easy – just go to your dashboard and [create a new lesson](http://hexlet.io/account/lessons/new?locale=en) from "[My Lessons](http://hexlet.io/account/lessons)" page. There you can define the theory step, include transcription for the video if you like, create quiz questions and select the exercise.
+Creating a lesson is easy – just go to *[My Lessons](http://hexlet.io/account/lessons)* page and click on *[Add new lesson](http://hexlet.io/account/lessons/new)* button. There you can add theory, transcription for the video (optional), quiz questions and select an exercise. If it you first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
 
 Read more about [Conceptual specifications for lessons](http://feedback.hexlet.io/knowledgebase/articles/489631) and [Technical specifications for lessons.﻿](http://feedback.hexlet.io/knowledgebase/articles/489636)
 
-When you make your first lesson you might not have any exercises to select yet, so let's create one.
-
-## Creating an exercise
+## Create an exercise
 
 Exercise includes:
 
-* Description of the task (what is the challenge for the user, what needs to be done in order to complete the
- exercise)
+* Description of the task (what is the challenge for the user, what needs to be done in order to complete the exercise)
 * Definition of the development environment (e.g. what programming languages, frameworks, servers are required to complete the exercise)
 * Tests (to automatically assess user's solution)
 * Solution (will not be shown to user)
+
 In order to include an exercise to a lesson:
 
 1. Install Hexlet Vagrant
@@ -24,9 +22,7 @@ In order to include an exercise to a lesson:
 3. Test your exercise
 4. Push it to Bitbucket (private repository)
 5. Login to Hexlet via Bitbucket
-6. Go to "[My Exercises](http://hexlet.io/account/exercises)", add new exercise repository url and click
- "Build"
-Hexlet builds a Docker container with the environment you have defined. When it is built, you can include this exercise into any lesson.
+6. Go to *[My Exercises](http://hexlet.io/account/exercises)*, add new exercise repository url and click "Build". Hexlet builds a Docker container with the environment you have defined. When it is built, you can include this exercise into any lesson.
 
 Let's go over each step in more detail.
 
@@ -83,7 +79,7 @@ README.md file contains description of the task written in markdown syntax. This
 
 #### Dockerfile
 
-Hexlet will build a Docker image for your exercise, so you need a Dockerfile. It should be inherited from our base image (see first line [here](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile)). Include any steps needed for your environment. Please, refer to [Docker documentation](https://docs.docker.com/reference/builder/). Also, take a look at [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/).
+Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. It should be inherited from our base image (see first line [here](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile)). Include any steps needed for your environment. Please, refer to [Docker documentation](https://docs.docker.com/reference/builder/). Also, take a look at [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/).
 
 #### Ignorefile
 
@@ -138,7 +134,7 @@ Right now we support [Bitbucket](https://bitbucket.org/) primarily because you c
 
 ### 6. Add new exercise repository url and build
 
-﻿Go to "[My Exercises](http://hexlet.io/account/exercises)", click "[Add new exercise](https://hexlet.io/account/exercises/new)" button, put the title for your exercsie and the BitBucket repository address (e.g. `git@bitbucket.org:hexlet-exercises/javascript_closures_exercise.git`). Hit "Create exercise" button.
+﻿Go to *[My Exercises](http://hexlet.io/account/exercises)*, click *[Add new exercise](https://hexlet.io/account/exercises/new)* button, put the title for your exercsie and the BitBucket repository address (e.g. `git@bitbucket.org:hexlet-exercises/javascript_closures_exercise.git`). Hit "Create exercise" button.
 
 At this point you will be redirected to "My exercises" page and you will see your exercise in the list. It's state will be "not built", it means it is not ready for lessons yet. Click on the edit button and then click "Build". This will take some time: Hexlet build a Docker image for you. On the build page you will see the log and errors, if any.
 
