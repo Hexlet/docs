@@ -1,4 +1,6 @@
-## General
+# How to create lesson and exercise
+
+## Overview
 
 Creating a lesson is easy – just go to your dashboard and [create a new lesson](http://hexlet.io/account/lessons/new?locale=en) from "[My Lessons](http://hexlet.io/account/lessons)" page. There you can define the theory step, include transcription for the video if you like, create quiz questions and select the exercise.
 
@@ -34,8 +36,7 @@ You can create and test lessons on your computer without Hexlet Vagrant, all you
 
 #### 1.1 Install VirtualBox, Vagrant and Git
 
-VirtualBox is a free virtual machine from Oracle. Download and install a version for your operating system. Please, refer to the
-[official documentation](https://www.virtualbox.org/wiki/End-user_documentation) if needed.
+VirtualBox is a free virtual machine from Oracle. Download and install a version for your operating system. Please, refer to the [official documentation](https://www.virtualbox.org/wiki/End-user_documentation) if needed.
 
 [Vagrant](https://www.vagrantup.com/) allows us to create and configure lightweight, portable development environments as virtual machines.﻿ Once again, just [download](https://www.vagrantup.com/downloads.html) and install a version for your OS. Please, use version 1.7 and above.
 
@@ -100,7 +101,7 @@ Sometimes need to have some services running in your exercise (e.g., redis serve
 
 Just leave it as in [example](https://github.com/Hexlet/example_exercise/blob/master/Makefile).
 
-#### exercise folder
+#### exercise/
 
 This is the folder users see. Include the full solution here and mark the parts you want to hide (because you don't want users to see the full solution, right?) with BEGIN and END comments, like in [this example](https://github.com/Hexlet/example_exercise/blob/master/exercise/read_solution.py). Comment out BEGIN and END in any language you use. You can have multiple BEGIN-END blocks in a single file. Users will not see the code between those marks.
 
