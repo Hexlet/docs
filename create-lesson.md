@@ -2,7 +2,7 @@
 
 ## Create a lesson
 
-Creating a lesson is easy – just go to *[My Lessons](http://hexlet.io/account/lessons)* page and click on *[Add new lesson](http://hexlet.io/account/lessons/new)* button. There you can add theory, transcription for the video (optional), quiz questions and select an exercise. If it you first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
+Creating a lesson is easy – just go to *[My Lessons](http://hexlet.io/account/lessons)* page and click on *[Add new lesson](http://hexlet.io/account/lessons/new)* button. There you can add theory, transcription for the video (optional), quiz questions and select an exercise. If it is your first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
 
 Read more about [Conceptual specifications for lessons](http://feedback.hexlet.io/knowledgebase/articles/489631) and [Technical specifications for lessons.﻿](http://feedback.hexlet.io/knowledgebase/articles/489636)
 
@@ -10,12 +10,12 @@ Read more about [Conceptual specifications for lessons](http://feedback.hexlet.i
 
 Exercise includes:
 
-* Description of the task (what is the challenge for the user, what needs to be done in order to complete the exercise)
+* Description of the task (what is the challenge for the student, what needs to be done in order to complete the exercise)
 * Definition of the development environment (e.g. what programming languages, frameworks, servers are required to complete the exercise)
-* Tests (to automatically assess user's solution)
-* Solution (will not be shown to user)
+* Tests (to automatically assess student's solution)
+* Solution (will not be shown to students)
 
-In order to include an exercise to a lesson:
+In order to include an exercise to a lesson follow these steps:
 
 1. Install Hexlet Vagrant
 2. Create an exercise locally
@@ -75,7 +75,7 @@ Create and test your exercise inside Hexlet Vagrant VM in `/vagrant/exercises/MY
 
 #### README.md
 
-README.md file contains description of the task written in markdown syntax. This text will be shown to a user when s/he starts the exercise.
+README.md file contains description of the task written in markdown syntax. This text will be shown to a student when s/he starts the exercise.
 
 #### Dockerfile
 
@@ -83,14 +83,14 @@ Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. 
 
 #### Ignorefile
 
-Include files you want to hide from users ([see example](https://github.com/Hexlet/example_exercise/blob/master/Ignorefile)).
+Include files you want to hide from students ([see example](https://github.com/Hexlet/example_exercise/blob/master/Ignorefile)).
 
 
-*Why? Exercise should include the solution, but, of course, you want to hide that solution from the user. You can mark parts of a file with BEGIN and END in order to hide those parts from the user, but if you want to hide the whole file, as if it doesn't exist, then put the path to that file into Ignorefile.*
+*Why? Exercise should include the solution, but of course you want to hide that solution from the student. You can mark parts of a file with BEGIN and END in order to hide those parts, but if you want to hide the whole file, as if it doesn't exist, then put the path to that file into Ignorefile.*
 
 #### services.conf
 
-Sometimes need to have some services running in your exercise (e.g., redis server or database server). Define the configuration file for supervisord (
+Sometimes you need to have some services running in your exercise (e.g., redis server or database server). Define the configuration file for supervisord (
 [see example](https://github.com/Hexlet/example_exercise/blob/master/services.conf)). Refer to [Docker documentation](https://docs.docker.com/articles/using_supervisord/) for more info.
 
 #### Makefile
@@ -99,7 +99,7 @@ Just leave it as in [example](https://github.com/Hexlet/example_exercise/blob/ma
 
 #### exercise/
 
-This is the folder users see. Include the full solution here and mark the parts you want to hide (because you don't want users to see the full solution, right?) with BEGIN and END comments, like in [this example](https://github.com/Hexlet/example_exercise/blob/master/exercise/read_solution.py). Comment out BEGIN and END in any language you use. You can have multiple BEGIN-END blocks in a single file. Users will not see the code between those marks.
+This is the folder students see. Include the full solution here and mark the parts you want to hide (because you don't want students to see the full solution, right?) with BEGIN and END comments, like in [this example](https://github.com/Hexlet/example_exercise/blob/master/exercise/read_solution.py). Comment out BEGIN and END in any language you use. You can have multiple BEGIN-END blocks in a single file. Students will not see the code between those marks.
 
 Sometimes you want to hide the whole file. In the example exercise we hide 'write_solution.py' file. This can be done with Ignorefile as described above.
 
@@ -126,7 +126,7 @@ This will build the image (the same way Hexlet will build it in the cloud), star
 
 Right now we support [Bitbucket](https://bitbucket.org/) primarily because you can create private repositories for free. Create one and push your exercise into master branch.
 
-**IMPORTANT**: due [Docker Registry bug](https://github.com/docker/docker-registry/issues/901), repo names with more than 30 characters are rejected. So, make sure your repo name is 30 characters or less.
+**IMPORTANT**: due to [Docker Registry bug](https://github.com/docker/docker-registry/issues/901), repo names with more than 30 characters are rejected. So, make sure your repo name is 30 characters or less.
 
 ### 5. Login to Hexlet via Bitbucket
 
@@ -136,7 +136,7 @@ Right now we support [Bitbucket](https://bitbucket.org/) primarily because you c
 
 ﻿Go to *[My Exercises](http://hexlet.io/account/exercises)*, click *[Add new exercise](https://hexlet.io/account/exercises/new)* button, put the title for your exercsie and the BitBucket repository address (e.g. `git@bitbucket.org:hexlet-exercises/javascript_closures_exercise.git`). Hit "Create exercise" button.
 
-At this point you will be redirected to "My exercises" page and you will see your exercise in the list. It's state will be "not built", it means it is not ready for lessons yet. Click on the edit button and then click "Build". This will take some time: Hexlet build a Docker image for you. On the build page you will see the log and errors, if any.
+At this point you will be redirected to "My exercises" page and you will see your exercise in the list. It's state will be "not built", which means it is not ready for lessons yet. Click on the edit button and then click "Build". This will take some time: Hexlet build a Docker image for you. On the build page you will see the log and errors, if any.
 
 When it's done, you'll see the status changed to "built":
 
@@ -148,4 +148,4 @@ At this point you can add this exercise to any lesson you've created or will cre
 
 When you need to update your exercise (e.g. add something new or fix bugs), just push the changes to your Bitbucket repository. Hexlet will detect new commits and rebuild the image automatically.
 
-However, if you have started an exercise on the website (as user), then you will have to reset progress and start it again after an update to be able to see the changes.
+However, if you have started an exercise on the website (as students), then you will have to reset progress and start it again after an update to be able to see the changes.
