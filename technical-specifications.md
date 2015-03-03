@@ -1,4 +1,4 @@
-# Theory specifications
+# Technical specifications
 
 This article is about the technical requirements for Hexlet lessons. For non-technical specifications, please refer to [Conceptual specifications for lessons](conceptual-specifications.md).
 
