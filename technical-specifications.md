@@ -15,6 +15,9 @@ This article is about the technical requirements for Hexlet lessons. For non-tec
 
 * Our editor accepts markdown. Make sure your text is finely formatted. Do not use header 1 for headers, only smaller ones.
 * If you want to include images, upload them to imgur.com.
+* If you want to include code, wrap it between triple backticks and specify the language like so:
+
+![code](http://i.imgur.com/ANqhnSk.png)
 
 ## Challenge specifications
 
