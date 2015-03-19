@@ -1,12 +1,12 @@
 # How to create lesson and exercise
 
-## Create a lesson
+## Creating a lesson
 
-Creating a lesson is easy – just go to *[My Lessons](http://hexlet.io/account/lessons)* page and click on *[Add new lesson](http://hexlet.io/account/lessons/new)* button. There you can add theory, transcription for the video (optional), quiz questions and select an exercise. If it is your first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
+Creating a lesson is easy – just go to **[My Lessons](http://hexlet.io/account/lessons)** page and click on **[Add new lesson](http://hexlet.io/account/lessons/new)** button. There you can add theory, write transcription for the video (optional), create quiz questions and select an exercise. If it is your first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
 
 Read more about [Conceptual specifications for lessons](conceptual-specifications.md) and [Technical specifications for lessons.﻿](theory-specifications.md)
 
-## Create an exercise
+## Creating an exercise
 
 Exercise includes:
 
@@ -17,7 +17,7 @@ Exercise includes:
 
 In order to include an exercise to a lesson follow these steps:
 
-1. Install Hexlet Vagrant
+1. Download Hexlet Exercise Kit
 2. Create an exercise locally
 3. Test your exercise
 4. Push it to Bitbucket (private repository)
@@ -26,52 +26,47 @@ In order to include an exercise to a lesson follow these steps:
 
 Let's go over each step in more detail.
 
-### 1. Install Hexlet Vagrant
+### 1. Set up the Hexlet Exercise Kit
 
-You can create and test lessons on your computer without Hexlet Vagrant, all you need is [Docker](http://docker.io) installed. But it is easier to have this small virtual machine with pre-defined environment that is guaranteed to work. No need to configure and maintain it, install once and upgrade when needed.
+To create and test lessons on your computer all you need is [Docker](http://docker.io). If you're a Linux user, just install Docker and move on to part **2. Create an exercise**
 
-#### 1.1 Install VirtualBox, Vagrant and Git
+If you're on Windows or Mac OS X, we recommend using [boot2docker](http://boot2docker.io/).
+
+#### 1.1 Install VirtualBox, boot2docker and Git
 
 VirtualBox is a free virtual machine from Oracle. Download and install a version for your operating system. Please, refer to the [official documentation](https://www.virtualbox.org/wiki/End-user_documentation) if needed.
 
-[Vagrant](https://www.vagrantup.com/) allows us to create and configure lightweight, portable development environments as virtual machines.﻿ Once again, just [download](https://www.vagrantup.com/downloads.html) and install a version for your OS. Please, use version 1.7 and above.
+[boot2docker](http://boot2docker.io/) is a lightweight Linux distribution based on Tiny Core Linux made specifically to run Docker containers. It runs completely from RAM, weighs ~27MB and boots in ~5s. Go to [boot2docker.io](http://boot2docker.io/) and install the version for your operating system.
 
 In case you don't have [Git](http://git-scm.com/) installed already, go ahead and [download](http://git-scm.com/downloads) and install it too.
 
-#### 1.2 Setup Hexlet VM
+#### 1.2 Get hexlet-exercise-kit
 
-Clone our VM package and get Vagrant going:
+Go to your home directory and clone `hexlet-exercise-kit` repository. boot2docker shares the home directory with the VM, so you MUST have the hexlet-exercise-kit in your home directory.
 
-```
-git clone https://github.com/Hexlet/hexlet-vagrant.git
-cd hexlet-vagrant
-vagrant up
-vagrant provision
-vagrant ssh
-```
+    git clone git@github.com:Hexlet/hexlet-exercise-kit.git
+    cd hexlet-exercise-kit
 
-This can take some time (enough to make a cup of coffee!), but don't worry – this is needed just once, the first time you do it.
+#### 1.3 Init and start boot2docker
 
-﻿That `/vagrant` folder inside your VM is synced to the `hexlet-vagrant﻿` folder on your host machine, the folder you worked in during step 1.2. This means you can edit exercise files outside the virtual machine, using whatever text editor you like. Of course, you can edit files inside the virtual machine, with vim or nano, for example.
+For most up-to-date info about boot2docker, see [official documentation page for Mac](https://docs.docker.com/installation/mac/) and [for Windows](https://docs.docker.com/installation/windows/).
 
-When you finished working you can stop the VM.
+In general, the flow is like this:
 
-```
-vagrant suspend
-```
+1. Run boot2docker application (it will open a terminal, init and start boot2docker)
+2. In the terminal, go to `hexlet-exercise-kit/exercises` folder.
+3. Work on your exercises
 
-When you want to come back just do:
+On OS X you can work with boot2docker with your usual command line. In this case:
 
-```
-vagrant up
-vagrant ssh
-```
-
-And you'll be back inside.
+1. Go to `hexlet-exercise-kit/exercises` folder.
+2. Initialize the virtual machine by running `boot2docker init`
+3. Start the machine by running `boot2docker start`
+4. Set the environment variables by running `$(boot2docker shellinit)`
 
 ### 2. Create an exercise
 
-Create and test your exercise inside Hexlet Vagrant VM in `/vagrant/exercises/MY_EXERCISE_FOLDER`. Here is an example of a Hexlet exercise – [https://github.com/Hexlet/example_exercise](https://github.com/Hexlet/example_exercise). You have to follow the same folder and file structure.
+Create and test your exercise inside `hexlet-exercise-kit/exercises/MY_EXERCISE` folder. Here is an example of a Hexlet exercise – [https://github.com/Hexlet/example_exercise](https://github.com/Hexlet/example_exercise). You have to follow the same folder and file structure.
 
 #### README.md
 
@@ -84,7 +79,6 @@ Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. 
 #### Ignorefile
 
 Include files you want to hide from students ([see example](https://github.com/Hexlet/example_exercise/blob/master/Ignorefile)).
-
 
 *Why? Exercise should include the solution, but of course you want to hide that solution from the student. You can mark parts of a file with BEGIN and END in order to hide those parts, but if you want to hide the whole file, as if it doesn't exist, then put the path to that file into Ignorefile.*
 
