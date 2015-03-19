@@ -76,9 +76,11 @@ README.md file contains description of the task written in markdown syntax. This
 
 Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. It should be inherited from our base image (see first line [here](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile)). Include any steps needed for your environment. Please, refer to [Docker documentation](https://docs.docker.com/reference/builder/). Also, take a look at [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/).
 
+Install additional software with [apt-install](https://github.com/Hexlet/hexlet-exercise-kit/blob/master/base_image/scripts/apt-install) script. It will automatically set the correct flags for apt-get and clean stuff before leaving. See [example](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile).
+
 #### Ignorefile
 
-Include files you want to hide from students ([see example](https://github.com/Hexlet/example_exercise/blob/master/Ignorefile)).
+Include files and folders you want to hide from students ([see example](https://github.com/Hexlet/example_exercise/blob/master/Ignorefile)).
 
 *Why? Exercise should include the solution, but of course you want to hide that solution from the student. You can mark parts of a file with BEGIN and END in order to hide those parts, but if you want to hide the whole file, as if it doesn't exist, then put the path to that file into Ignorefile.*
 
@@ -103,6 +105,8 @@ There is only one convention: Makefile should has one rule – "test" ([see exam
 Since your exercise must include the full solution, your tests should pass upon submitting the exercise. Hexlet will check if your tests pass with your solution, as well as if tests fail after solution is hidden (after processing the BEGIN-END blocks and Ignorefile).
 
 It is up to you what and how to test.
+
+####
 
 ### 3. Test your exercise
 
