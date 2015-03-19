@@ -17,7 +17,7 @@ This article is about the technical requirements for Hexlet lessons. For non-tec
 * If you want to include images, upload them to imgur.com.
 * If you want to include code, wrap it between triple backticks and specify the language like so:
 
-![code](http://i.imgur.com/ANqhnSk.png)
+![Python code](assets/code-format.png)
 
 ## Challenge specifications
 
