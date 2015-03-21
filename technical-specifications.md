@@ -7,7 +7,7 @@ This article is about the technical requirements for Hexlet lessons. For non-tec
 * Accepted formats: MOV, QT, OGG, MPEG, AVI.
 * Minimum resolution: 1280x720 (720p),﻿
 * If it's a screencast, do not record a huge screen, limit to standard 13", 15" or 17".
-* Make sure the audio doesn't have much noise. We suggest using an external USB-mic. Logitec USB headsets are usually good. Alternatively, you can go with a separate USB-mic. We recommend Rode podcaster, Blue mic Snowball and Samson c01u﻿.
+* Make sure the audio doesn't have much noise. We suggest using an external USB microphone. Logitec USB headsets are usually good enough. We could also recommend "Rode Podcaster", "Blue Microphones", "Snowball" and "Samson C01U﻿".
 * Any text, including code that you might show in your IDE, should be large enough to see. Regular font-size for programming is not large enough for video, so make sure you increase the font size.
 * Provide all source files: video, sound (if recorded separately), slides (PowerPoint, Keynote or Google Presentations), images.
 
