@@ -86,7 +86,7 @@ Include files and folders you want to hide from students ([see example](https://
 
 #### services.conf
 
-Sometimes you need to have some services running in your exercise (e.g., redis server or database server). Define the configuration file for supervisord (
+Sometimes you need to have some services running in your exercise (e.g., Redis server or database server). Define the configuration file for supervisord (
 [see example](https://github.com/Hexlet/example_exercise/blob/master/services.conf)). Refer to [Docker documentation](https://docs.docker.com/articles/using_supervisord/) for more info.
 
 #### Makefile
