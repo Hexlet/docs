@@ -28,7 +28,7 @@ Let's go over each step in more detail.
 
 ### 1. Set up the Hexlet Exercise Kit
 
-To create and test lessons on your computer all you need is [Docker](http://docker.io). If you're a Linux user, just install Docker and move on to part **[2. Create an exercise](#2-create-an-exercise)**
+To create and test lessons on your computer all you need is [Docker](http://docker.io). If you're a Linux user, [just install](https://docs.docker.com/installation/#installation) Docker and move on to part **[2. Create an exercise](#2-create-an-exercise)**
 
 If you're on Windows or Mac OS X, we recommend using [boot2docker](http://boot2docker.io/).
 
