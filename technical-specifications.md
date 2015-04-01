@@ -14,6 +14,7 @@ This article is about the technical requirements for Hexlet lessons. For non-tec
 ## Text
 
 * Our editor accepts markdown. Make sure your text is finely formatted. Do not use header 1 for headers, only smaller ones.
+* Please, run your texts through a spell checker. For Russian we recommend [Yandex's spell checker](https://tech.yandex.ru/speller/). For English, check out [Grammarly](https://www.grammarly.com/).
 * If you want to include images, upload them to imgur.com.
 * If you want to include code, wrap it between triple backticks and specify the language like so:
 
