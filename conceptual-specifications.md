@@ -1,6 +1,6 @@
 # Conceptual specifications
 
-This article is about the idea behind Hexlet lessons and non-technical specifications. For technical specifications, please refer to [Technical specifications for lesson](theory-specifications.md).
+This article is about the idea behind Hexlet lessons and non-technical specifications. For technical specifications, please refer to [Technical specifications for lesson](technical-specifications.md).
 
 ## Overview
 
