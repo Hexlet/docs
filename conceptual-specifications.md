@@ -15,7 +15,7 @@ Hexlet lesson can include up to three parts:
 * Although lessons are building blocks of courses, they should be as independent as possible, so that they provide a way for independent learning in any order and combination of lessons.
 * Each lesson should cover a **single skill or concept**, should not be heavily connected to other lessons. Generally speaking, lessons should make perfect sense on their own.* Lesson should **get to the practice** as soon as possible. Do not spend time explaining the history of a programming language, for example. Instead, show the sample code right away, explain it and proceed to the challenge.
 * Give your lesson a **complete name**. It should make sense without context. So, "Lesson 4" is BAD, "Introduction to anonymous functions in JavaScript" is GOOD.
-* **Define the audience** clearly and follow that definition. A lesson might be designed for absolute beginners or experienced programmers, but not for both. So, for example, don't casually mention multithreading to absolute beginners, it will scare them off. Similarly, do not explain what variables are to experienced programmers.
+* **Define the audience** clearly and follow that definition. A course might be designed for absolute beginners or experienced programmers, but not for both. So, for example, don't casually mention multithreading to absolute beginners, it will scare them off. Similarly, do not explain what variables are to experienced programmers.
 
 ## Theory specifications
 
@@ -24,7 +24,8 @@ Hexlet lesson can include up to three parts:
 
 ## Exercise specifications
 
-* It should normally take no more than 2 hours to complete the exercise.
+* It should normally take no more than 30 minutes to complete an exercise.
+* First exercises in the course should be very simple. This will help build up user's confidence and help them progress further. For example, in the introductory courses about programming languages first exercise usually is a simple "change this one line" sort of problem.
 * If there are many steps in a single challenge exercise, think about splitting it into multiple exercises or even multiple lessons altogether.
 
 ## Quiz specifications
