@@ -4,6 +4,8 @@ This article is about the idea behind Hexlet lessons and non-technical specifica
 
 ## Overview
 
+A Hexlet course is a short, concise course which covers a particular area. We believe that most of traditional large courses should be divided into smaller parts, for example, "C programming language" is actually a number of courses – "Intro to C", "Memory management in C", "Working with files in C", etc.
+
 Hexlet lesson can include up to three parts:
 
 * **Theory**. Goal: to introduce the user to some new concept or idea.
