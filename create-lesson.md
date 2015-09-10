@@ -2,7 +2,7 @@
 
 ## Creating a lesson
 
-Creating a lesson is easy – just go to **[My Lessons](http://hexlet.io/account/lessons)** page and click on **[Add new lesson](http://hexlet.io/account/lessons/new)** button. There you can add theory, write transcription for the video (optional), create quiz questions and select an exercise. If it is your first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
+Creating a lesson is easy – just go to **[My Lessons](https://ru.hexlet.io/teacher/lessons)** page and click on **[Add new lesson](https://ru.hexlet.io/teacher/lessons/new)** button. There you can add theory, write transcription for the video (optional), create quiz questions and select an exercise. If it is your first lesson, then most probably you have no exercises to select yet. The next section explains how to create you first exercise.
 
 Read more about [Conceptual specifications for lessons](conceptual-specifications.md) and [Technical specifications for lessons.﻿](technical-specifications.md)
 
