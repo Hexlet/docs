@@ -42,27 +42,24 @@ In case you don't have [Git](http://git-scm.com/) installed already, go ahead an
 
 #### 1.2 Get hexlet-exercise-kit
 
-Go to your home directory and clone `hexlet-exercise-kit` repository. boot2docker shares the home directory with the VM, so you MUST have the hexlet-exercise-kit in your home directory.
+Go to your home directory and clone `hexlet-exercise-X` repository, where X == your chosen language. Here are the available languages:
 
-    git clone git@github.com:Hexlet/hexlet-exercise-kit.git
+```
+hexlet-exercise-php
+hexlet-exercise-javascript 
+hexlet-exercise-java 
+hexlet-exercise-ruby 
+hexlet-exercise-python
+```
+
+boot2docker shares the home directory with the VM, so you MUST have the hexlet-exercise-kit in your home directory.
+
+    git clone git@github.com:Hexlet/hexlet-exercise-php.git
     cd hexlet-exercise-kit
 
-#### 1.3 Init and start boot2docker
+#### 1.3 Docker Machine
 
-For most up-to-date info about boot2docker, see [official documentation page for Mac](https://docs.docker.com/installation/mac/) and [for Windows](https://docs.docker.com/installation/windows/).
-
-In general, the flow is like this:
-
-1. Run boot2docker application (it will open a terminal, init and start boot2docker)
-2. In the terminal, go to `hexlet-exercise-kit/exercises` folder.
-3. Work on your exercises
-
-On OS X you can work with boot2docker with your usual command line. In this case:
-
-1. Go to `hexlet-exercise-kit/exercises` folder.
-2. Initialize the virtual machine by running `boot2docker init`
-3. Start the machine by running `boot2docker start`
-4. Set the environment variables by running `$(boot2docker shellinit)`
+On OS X or Windows, use [Docker Toolbox](https://docs.docker.com/v1.8/installation/mac/).
 
 ### 2. Create an exercise
 
