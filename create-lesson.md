@@ -42,19 +42,9 @@ In case you don't have [Git](http://git-scm.com/) installed already, go ahead an
 
 #### 1.2 Get hexlet-exercise-kit
 
-Go to your home directory and clone `hexlet-exercise-X` repository, where X == your chosen language. Here are the available languages:
+Go to your home directory and clone `hexlet-exercise-kit` repository. boot2docker shares the home directory with the VM, so you MUST have the hexlet-exercise-kit in your home directory.
 
-```
-hexlet-exercise-php
-hexlet-exercise-javascript 
-hexlet-exercise-java 
-hexlet-exercise-ruby 
-hexlet-exercise-python
-```
-
-boot2docker shares the home directory with the VM, so you MUST have the hexlet-exercise-kit in your home directory.
-
-    git clone git@github.com:Hexlet/hexlet-exercise-php.git
+    git clone git@github.com:Hexlet/hexlet-exercise-kit.git
     cd hexlet-exercise-kit
 
 #### 1.3 Docker Machine
@@ -71,7 +61,15 @@ README.md file contains description of the task written in markdown syntax. This
 
 #### Dockerfile
 
-Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. It should be inherited from our base image (see first line [here](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile)). Include any steps needed for your environment. Please, refer to [Docker documentation](https://docs.docker.com/reference/builder/). Also, take a look at [Best practices for writing Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/).
+Hexlet will build a Docker image for your exercise, so you need a `Dockerfile`. It should be inherited from our base image (see first line [here](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile)). Please, select the base image according to your needs, these are available languages:
+
+```
+hexlet/hexlet-php 
+hexlet/hexlet-javascript 
+hexlet/hexlet-java 
+hexlet/hexlet-ruby 
+hexlet/hexlet-python
+```
 
 Install additional software with [apt-install](https://github.com/Hexlet/hexlet-exercise-kit/blob/master/base_image/scripts/apt-install) script. It will automatically set the correct flags for apt-get and clean stuff before leaving. See [example](https://github.com/Hexlet/example_exercise/blob/master/Dockerfile).
 
