@@ -22,7 +22,7 @@ In order to include an exercise to a lesson follow these steps:
 3. Test your exercise
 4. Push it to Bitbucket (private repository)
 5. Login to Hexlet via Bitbucket
-6. Go to **[My Exercises](http://hexlet.io/account/exercises)**, add new exercise repository url and click "Build". Hexlet builds a Docker container with the environment you have defined. When it is built, you can include this exercise into any lesson.
+6. Go to **[My Exercises](http://hexlet.io/teacher/exercises)**, add new exercise repository url and click "Build". Hexlet builds a Docker container with the environment you have defined. When it is built, you can include this exercise into any lesson.
 
 Let's go over each step in more detail.
 
@@ -53,7 +53,7 @@ On OS X or Windows, use [Docker Toolbox](https://docs.docker.com/v1.8/installati
 
 ### 2. Create an exercise
 
-Create and test your exercise inside `hexlet-exercise-kit/exercises/MY_EXERCISE` folder. Here is an example of a Hexlet exercise – [https://github.com/Hexlet/example_exercise](https://github.com/Hexlet/example_exercise). You have to follow the same folder and file structure.
+Create and test your exercise inside `hexlet-exercise-kit/courses/course-name/name_exercise` folder. Here is an example of a Hexlet exercise – [https://github.com/Hexlet/example_exercise](https://github.com/Hexlet/example_exercise). You have to follow the same folder and file structure.
 
 #### README.md
 
